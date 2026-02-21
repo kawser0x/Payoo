@@ -31,7 +31,34 @@
     </style>
     <title>Payoo</title>
   </head>
-  <body>
-    
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <div class="logo w-[200px] mx-auto pt-32">
+      <img src="./assets/Logo-full.png" alt="" />
+    </div>
+    <div class="login pt-8">
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Mobile Number</label>
+            <input
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input rounded-full bg-base-200"
+              placeholder="Enter Your 11 Digit Number" />
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              maxlength="4"
+              type="password"
+              class="input rounded-full bg-base-200"
+              placeholder="Enter 4 Digit Pin" />
+
+            <button class="btn btn-primary mt-4 rounded-full">Login</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script/login.js"></script>
   </body>
 </html>
