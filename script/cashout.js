@@ -6,10 +6,11 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
   }
   const cashoutAmount = getValueFromInput("cashout-amount");
 
-  const balanceAmount = document.getElementById("balance");
-  const balance = balanceAmount.innerText;
+//   const balanceAmount = document.getElementById("balance");
+//   const balance = balanceAmount.innerText;
+const currentBalance = getBalance() ;
 
-  const newBalance = Number(balance) - Number(cashoutAmount);
+  const newBalance = currentBalance - Number(cashoutAmount);
 
   if (newBalance < 0) {
     alert("Insufficient Amount");
@@ -20,7 +21,8 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
   if (pin === "1234") {
     alert("cashout successfull");
     // console.log('new balance : ',newBalance);
-    balanceAmount.innerText = newBalance;
+    // document.getElementById('balance').innerText = newBalance;
+    setBalance(newBalance);
   } else {
     alert("invalid pin");
     return;
